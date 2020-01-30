@@ -1,0 +1,189 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Yellowtail ;
+}
+
+.section{
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.901042) 9.89%, rgba(255, 255, 255, 0.901042) 9.9%, rgba(255, 255, 255, 0.880208) 11.98%, rgba(255, 255, 255, 0.75) 57.81%, rgba(255, 255, 255, 0) 100%), #F3EDE5;
+  color: #EEC89B;
+  height: 40px;
+  a{
+    color:#EEC89B;
+    text-decoration: none;
+    margin-left: 85%;
+    font-size: 30px;
+  }
+  img{
+    width: 2%;
+  }
+}
+
+.collection {
+  h1 {
+    color: #EEC89B;
+    text-align: center;
+  }
+
+  .realisation {
+    display: inline;
+     margin-left: 10%;
+    img {
+      width: 311px;
+      height: 392px;
+    }
+  }
+}
+.soclePage {
+  text-align: center;
+  color: #EEC89B;
+  margin-top: 2%;
+  .resultat{
+    margin:1% 6% 2% 9%;
+    text-align: center;
+    img{
+      width: 442px;
+      height: 682px;
+    }
+  }
+  .socle {
+    display: inline-flex;
+    margin: 5% 6% 2% 9%;
+    text-align: center;
+
+    img {
+      width: 262px;
+      height: 273px;
+    }
+  }
+}
+.accueil{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 48px;
+  text-align: center;
+  img{
+    width: 311px;
+    height: 392px;
+    margin: 20% 5% 0;
+  }
+  a{
+    color: #EEC89B ;
+    text-decoration: none;
+  }
+}
+.button1{
+  background: rgba(238, 200, 155, 0.85);
+  border-radius: 50px;
+  transform: rotate(0.23deg);
+  width: 300px;
+  height: 50px;
+  border-color: transparent;
+  margin-top: 8%;
+  margin-left: 39%;
+  margin-bottom: 8%;
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+
+}
+.carousel-wrapper {
+  position: relative;
+  height: 400px;
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    h2{
+      color: #EEC89B;
+      opacity: 50%;
+      text-align: center;
+      margin-top: 20%;
+    }
+    h3{
+      color: red;
+      opacity: 50%;
+      font-size: 40px;
+    }
+    h4{
+      color: #EEC89B;
+      opacity: 50%;
+      font-size: 70px;
+      text-align: end;
+      margin-top: 20%;
+    }
+    .arrow {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 50px;
+      height: 100%;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      background: url("http://haloxp.com/codepen/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
+      &.arrow-prev {
+        left: 0;
+      }
+      &.arrow-next {
+        right: 0;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+    &.light {
+      color: white;
+
+      .arrow {
+        background: url("http://haloxp.com/codepen/carousel-arrow-light.png") 50% 50% / 20px no-repeat;
+      }
+
+    }
+    @media (max-width: 480px) {
+      .arrow, &.light .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
+  }
+  [id^="target-item"] {
+    display: none;
+  }
+  .item-1 {
+    z-index: 2;
+    opacity: 1;
+    background-image: url('/build/pictures/roseR.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+  }
+
+  .item-2 {
+    background-image: url('/build/pictures/choice-color.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
+  .item-3 {
+    background-image: url('/build/pictures/resultat-bleu.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  *:target ~ .item-1 {
+    opacity: 0;
+  }
+  #target-item-1:target ~ .item-1 {
+    opacity: 1;
+  }
+  #target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }
+}
