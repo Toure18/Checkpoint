@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <header>
+        {% include 'home/nav.html.twig' %}
+    </header>
+    <div class="soclePage">
+    <h1> Pour finir choisi ta rose</h1>
+    {% for collection in collections %}
+        <div class="socle">
+            <a href="{{ path('resultat') }}"><img src="{{asset("build/pictures/") }}{{ collection }}" alt="rose"></a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

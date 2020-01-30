@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <header>
+        {% include 'home/nav.html.twig' %}
+    </header>
+
+    <div class="carousel-wrapper">
+
+        <span id="target-item-1"></span>
+        <span id="target-item-2"></span>
+        <span id="target-item-3"></span>
+
+        <div class="carousel-item item-1">
+            <h2>Que vos fleurs vous unissent pour l’éternité !</h2>
+            <a class="arrow arrow-prev" href="#target-item-3"></a>
+            <a class="arrow arrow-next" href="#target-item-2"></a>
+        </div>
+
+        <div class="carousel-item item-2" >
+            <h3>Color ta rose</h3>
+            <a class="arrow arrow-prev" href="#target-item-1"></a>
+            <a class="arrow arrow-next" href="#target-item-3"></a>
+        </div>
+        <div class="carousel-item item-3" >
+            <h4>Illumine ta rose</h4>
+            <a class="arrow arrow-prev" href="#target-item-2"></a>
+            <a class="arrow arrow-next" href="#target-item-1"></a>
+        </div>
+    </div>
+
+    <button class="button1"><a href="{{ path('accueil') }}">Crée la fleur qui vous rapproche</a></button>
+
+
+    <footer>
+        {% include 'home/footer.html.twig' %}
+    </footer>
+{% endblock %}

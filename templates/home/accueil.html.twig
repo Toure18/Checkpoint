@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header>
+        {% include 'home/nav.html.twig' %}
+    </header>
+    <div class="accueil">
+    <figure>
+        <a href="{{ path('realisation') }}">
+        <img src="{{ asset("build/pictures/resultat-bleu.jpg")}}" alt="rose" />
+        <figcaption>Collection</figcaption>
+        </a>
+    </figure>
+
+    <figure>
+        <a href="{{ path('socle') }}">
+        <img src="{{ asset("build/pictures/creat.jpg")}}" alt="création" />
+        <figcaption>Crée ta Rose</figcaption>
+        </a>
+    </figure>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <header>
+        {% include 'home/nav.html.twig' %}
+    </header>
+    <div class="soclePage">
+    <h1>Choisi ton Support de Cloche...</h1>
+    {% for collection in collections %}
+          <div class="socle">
+           <form action="" method="get">
+               <a href="{{ path('led') }}"><img src="{{asset("build/pictures/") }}{{ collection }}" alt="socle"></a>
+              </form>
+          </div>
+    {% endfor %}
+    </div>
+{% endblock %}

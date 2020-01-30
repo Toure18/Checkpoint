@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RealisationController!{% endblock %}
+
+{% block body %}
+    <header>
+        {% include 'home/nav.html.twig' %}
+    </header>
+    <div class="collection">
+        <h1>Collection</h1>
+    {% for roseCollection in roseCollections %}
+        <div class="realisation">
+            <img src="{{asset("build/pictures/") }}{{ roseCollection.realisation }}" alt="image de de rose réaliser">
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
